@@ -1,0 +1,387 @@
+@import url("reset.css");
+
+:root{
+    --very-dark-blue:hsl(243, 87%, 12%);
+    --desaturated-blue:hsl(238, 22%, 44%);
+    --bright-blue:hsl(224, 93%, 58%);
+    --modern-cyan:hsl(170, 45%, 43%);
+    --light-grayish-blue:hsl(240, 75%, 98%);
+    --light-gray:hsl(0, 0%, 75%);
+}
+
+*{
+    margin:0;
+    font-family: "Raleway";
+    font-size: 16px;
+}
+
+/* General Styling */
+
+header,section,footer{
+    padding:max(5%,2rem);
+}
+
+p{
+    font-family: "Open Sans";
+}
+
+h1{
+    color:var(--very-dark-blue);
+    font-size: 25px;
+}
+
+h2{
+    color:white;
+    font-size: 20px;
+}
+
+h4{
+    margin:0;
+    color:var(--very-dark-blue);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+a{
+    font-size: 14px;
+    text-decoration: none;
+    font-family: "Raleway";
+}
+
+a:hover{
+    color:var(--bright-blue)
+}
+
+button{
+    cursor: pointer;
+    padding:0.5rem 3rem;
+    color:white;
+    font-weight: 600;
+    font-size: 14px;
+
+    background-color: var(--bright-blue);
+    border:none;
+    border-radius: 3px;
+}
+
+button:hover{
+    opacity: 0.6;
+}
+
+input{
+    cursor: pointer;
+    padding:0.5rem 0 0.4rem 0.7rem;
+    width:100%;
+    border:1px solid;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Styling the Header */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img{
+    width:100px;
+}
+
+.top-bar-links{
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Styling the Body */
+
+section{
+    padding-bottom: 5rem;
+}
+
+.first-section{
+    background-image: url("../images/bg-curve-mobile.svg");
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.first-section-text{
+    color:var(--very-dark-blue);
+
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    text-align: center;
+}
+
+.first-section-text form{
+    display: flex;
+    flex-direction: column;
+    gap:0.8rem;
+}
+
+.second-section{
+    background-color: var(--light-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    gap:5rem;
+}
+
+.second-section-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.5rem;
+}
+
+.second-section-text h1{
+    font-size: 16px;
+}
+
+.text{
+    color:var(--desaturated-blue);
+}
+
+#how-fylo{
+    cursor: pointer;
+    color:var(--modern-cyan);
+
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+
+    border-bottom: 1px solid var(--modern-cyan);
+}
+
+#fylo-text{
+    font-size: 13px;
+}
+
+#how-fylo:hover{
+    opacity: 0.6;
+}
+
+@media (min-width:50em){
+    input{
+        max-width: 15rem;
+    }
+
+    .illustration{
+        max-width: 400px;
+    }
+
+    .first-section{
+        background-image: url("../images/bg-curve-desktop.svg");
+        padding-bottom: 10rem;
+    }
+
+    .first-section-text{
+        text-align: left;
+    }
+
+    .first-section-text form{
+        flex-direction: row;
+    }
+
+    .first-section,.second-section{
+        flex-direction: row-reverse;
+    }
+
+    .text{
+        color:var(--very-dark-blue);
+        padding-right:7rem;
+    }
+}
+
+/* Styling the Quote */
+
+.quote-container{
+    background-color: white;
+    padding:2rem;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+}
+
+.quote-container img{
+    width:15px;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.author div p{
+    color:var(--desaturated-blue);
+    font-size: 12px;
+}
+
+.author img{
+    width:35px;
+    border-radius: 100%;
+}
+
+@media (min-width:50em){
+    .second-section-text{
+        align-items: start;
+    }
+
+    .second-section-text h1{
+        font-size: 20px;
+    }
+
+    .quote-container{
+        max-width: 25rem;
+    }
+}
+
+/* Third Section Styling */
+
+.third-section{
+    background-color: var(--desaturated-blue);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.5rem;
+}
+
+.third-section-text{
+    color:white;
+    text-align: center;
+}
+
+.third-section-text h2{
+    padding:1rem 0;
+}
+
+.third-section form{
+    width:80%;
+
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+@media (min-width:50em){
+    .third-section{
+        flex-direction: row;
+    }
+
+    .third-section-text{
+        text-align: left;
+    }
+
+    #third-section-button{
+       padding:0.5rem 1rem;
+       width:fit-content;
+    }
+}
+
+/* Styling the Footer */
+
+footer{
+    color:white;
+    background-color: var(--very-dark-blue);
+    
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+#logo{
+    width:100px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap:0.7rem;
+}
+
+.phone,.email{
+    display: flex;
+    align-items: center;
+    gap:0.7rem;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.links nav{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap:0.7rem;
+}
+
+.social-links i{
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 100%;
+}
+
+i:hover{
+    filter: brightness(0) saturate(100%) invert(28%) sepia(80%) saturate(2878%) hue-rotate(220deg) brightness(100%) contrast(95%);
+}
+
+#facebook{
+    padding:0.4rem 0.6rem;
+}
+
+#twitter{
+    padding:0.4rem;
+}
+
+#instagram{
+    padding:0.4rem 0.5rem;
+}
+
+@media (min-width:50em){
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 30px 30px 30px 30px 30px;
+        grid-template-areas: 
+            'logo none1 none1'
+            'contact nav social'
+            'contact nav none3'
+            'none2 nav none3'
+            'none2 nav none3';
+    }
+
+    .contact{
+        grid-area: contact;
+    }
+
+    .links{
+        grid-area: nav;
+        flex-direction: row;
+        gap:50%;
+    }
+
+    .social-links{
+        grid-area: social;
+    }
+}
